@@ -1,0 +1,23 @@
+{
+  "name": "finervision_showcase",
+  "version": "1.0.0",
+  "description": "Showcase site finervision",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Laszlo Bedekovics",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "joi": "^17.4.1",
+    "knex": "^0.95.7",
+    "morgan": "^1.10.0",
+    "sqlite3": "^5.0.2"
+  }
+}
