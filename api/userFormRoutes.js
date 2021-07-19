@@ -16,14 +16,14 @@ usrFormRouter.get("/all", async (req, res) => {
 
 usrFormRouter.post("/save", async (req, res) => {
     try {
-       
-        const result = usrOps.validateUserForm(req.body);
+  
+        const result = usrOps.validateUserForm(req.body.payload);
         if ( result.error ) {
             res.status(400).send(result.error.details[0].message);
             return;
         }
 
-        const usrData = await usrOps.saveUsrData(req.body);
+        const usrData = await usrOps.saveUsrData(req.body.payload);
         res.status(201).json({ id: usrData[0] });
     } catch (error) {
         console.log(error);
